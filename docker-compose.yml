@@ -12,13 +12,13 @@ services:
  
       # HTTP Router
       - "traefik.http.routers.kebab.entrypoints=http"
-      - "traefik.http.routers.kebab.rule=Host(`xn--dnerhub-90a.de`)"
+      - "traefik.http.routers.kebab.rule=Host(`kebab.xn--dnerhub-90a.de`)"
       - "traefik.http.services.kebab.loadbalancer.server.port=10100"
       - "traefik.docker.network=main"
  
       # HTTPS Router
       - "traefik.http.routers.kebab-secure.entrypoints=https"
-      - "traefik.http.routers.kebab-secure.rule=Host(`xn--dnerhub-90a.de`)"
+      - "traefik.http.routers.kebab-secure.rule=Host(`kebab.xn--dnerhub-90a.de`)"
       - "traefik.http.routers.kebab-secure.tls=true"
       - "traefik.http.routers.kebab-secure.service=kebab"
       - "traefik.http.routers.kebab-secure.tls.certresolver=cloudflare"
