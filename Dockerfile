@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Kopiere die HTML-Datei in das Standard-Verzeichnis von Nginx
-COPY index.html /usr/share/nginx/html/index.html
+COPY . /usr/share/nginx/html
 
 # Exponiere den Standard-Port von Nginx
 EXPOSE 10100
