@@ -5,7 +5,7 @@ FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 
 # Exponiere den Standard-Port von Nginx
-EXPOSE 80
+EXPOSE 10100
 
 # Starte Nginx
 CMD ["nginx", "-g", "daemon off;"]
