@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Server</title>
+    <title>Helldivers</title>
     <style>
         body {
             margin: 0;
@@ -112,6 +112,7 @@
     <!-- Header -->
     <header>
         <h1>Helldivers</h1>
+        <h2 id="random-text">Platzhalter für Zufallstext</h2>
     </header>
 
     <!-- Main Content -->
@@ -134,5 +135,25 @@
         <p>&copy; 2025 Döner-Website | <a href="datenschutz.html" style="color: #ccc;">Datenschutz</a> | <a href="impressum.html" style="color: #ccc;">Impressum</a>
     </footer>
 
+    <script>
+        const sentences = [
+            "Incoming friendly fire! Dodge - or don't. Your call.",
+            "Dispense peace with the ultimate weaponry!",
+            "Return, refit, and redeploy to purge the stain of this failure with the peroxide of victory.",
+            "How about a nice cup of liber-tea?",
+            "Injury? What injury?",
+            "Say hello to democracy!",
+            "Freedom never sleeps!",
+            "Also Play Minecraft",
+            "Also Play Terraria"
+        ];
+
+        // Zufälligen Satz auswählen und anzeigen
+        window.onload = function () {
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            const randomSentence = sentences[randomIndex];
+            document.getElementById("random-text").textContent = randomSentence;
+        };
+    </script>
 </body>
 </html>
